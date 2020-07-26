@@ -11,3 +11,4 @@ As of Today, the below programs are covered
 - Left Rotate Array
 - Number Square Comparisons
 - Anagrams
+- SumZero
