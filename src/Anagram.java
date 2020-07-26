@@ -1,11 +1,19 @@
 /*
 Write a Program to Determine if two Strings are Anagrams.
+PS :- For simplicity Sake, let's assume all letters are lower case and there are no special characters like
+Space or Alpha Numeric
+What is an Anagram?
+An anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+typically using all the original letters exactly once.
 
 Example :-
 String s1="qwerty"
 String s2="ytqwre"
+areAnagrams(s1,s2) ==> Should Return False
 
-Above Strings are called Anagrams as they can be re-arranged to form each other
+String s1="aaz"
+String s2="zza"
+areAnagrams(s1,s2) ==> Should Return False
 * */
 
 import java.util.*;
@@ -48,21 +56,23 @@ public class Anagram {
     {
         boolean areAnagrams=false;
         Set<Character> firstMapCharacterList=firstMap.keySet();
-        Set<Character> secondMapCharacterSet=secondMap.keySet();
 
-         if(secondMapCharacterSet.containsAll(firstMapCharacterList))
+        for(Character c:firstMapCharacterList)
         {
-            areAnagrams=true;
-            return areAnagrams;
+            if(secondMap.get(c)==firstMap.get(c))
+            {
+                areAnagrams=true;
+            }
         }
+
         return areAnagrams;
     }
 
     public static void main(String args[])
     {
         Anagram anagram=new Anagram();
-        String string1="qwerty";
-        String string2="wqrtey";
+        String string1="awesome";
+        String string2="awesom";
         System.out.println("Are The Above Strings Anagrams?  "+anagram.areAnagrams(string1,string2));
     }
 }
