@@ -10,3 +10,4 @@ As of Today, the below programs are covered
 - String Reverse
 - Left Rotate Array
 - Number Square Comparisons
+- Anagrams
