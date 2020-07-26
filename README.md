@@ -12,3 +12,4 @@ As of Today, the below programs are covered
 - Number Square Comparisons
 - Anagrams
 - SumZero
+- Character Frequency Count Without Map
