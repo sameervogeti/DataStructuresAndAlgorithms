@@ -13,3 +13,4 @@ As of Today, the below programs are covered
 - Anagrams
 - SumZero
 - Character Frequency Count Without Map
+- Linear Search Brute Force
