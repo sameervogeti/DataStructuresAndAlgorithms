@@ -15,3 +15,4 @@ As of Today, the below programs are covered
 - Character Frequency Count Without Map
 - Linear Search Brute Force
 - SumRangeRecursion
+- FactorialIterative
