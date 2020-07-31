@@ -16,3 +16,4 @@ As of Today, the below programs are covered
 - Linear Search Brute Force
 - SumRangeRecursion
 - FactorialIterative
+- FactorialRecursive
