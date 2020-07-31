@@ -20,3 +20,4 @@ As of Today, the below programs are covered
 - Power Using Recursion
 - Product Of Arrays Using Recursion
 - Fibbonaci Using Recursion
+- Binary Search for an Integer Array
