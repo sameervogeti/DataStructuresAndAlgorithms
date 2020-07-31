@@ -1,5 +1,5 @@
 /*
-* Program to find the first position of a given integer in an integer array using linear search.
+* Program to find the first position of a given integer in a sorted integer array using linear search.
 * If number isn't found, return -1
 * This is not a good approach as time complexity is O(N)
 * */
