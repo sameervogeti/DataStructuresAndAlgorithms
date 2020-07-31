@@ -14,6 +14,7 @@ As of Today, the below programs are covered
 - SumZero
 - Character Frequency Count Without Map
 - Linear Search Brute Force
-- SumRangeRecursion
-- FactorialIterative
-- FactorialRecursive
+- SumRange using Recursion
+- Factorial Iterative
+- Factorial Recursive
+- Power Using Recursion
