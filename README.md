@@ -23,3 +23,4 @@ As of Today, the below programs are covered
 - Binary Search for an Integer Array
 - Bubble Sort
 - Selection Sort
+- Insertion Sort
