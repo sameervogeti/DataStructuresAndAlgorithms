@@ -7,8 +7,10 @@ public class BubbleSort {
 
     int[] bubbleSort(int[] array)
     {
+        boolean noSwaps;
         for(int i=array.length-1;i>=0;i--)
         {
+            noSwaps=true;
             for(int j=0;j<=i-1;j++)
             {
                 if(array[j]>array[j+1])
@@ -16,7 +18,12 @@ public class BubbleSort {
                     int temp=array[j];
                     array[j]=array[j+1];
                     array[j+1]=temp;
+                    noSwaps=false;
                 }
+            }
+            if(noSwaps)
+            {
+                break;
             }
         }
         return array;
@@ -24,7 +31,7 @@ public class BubbleSort {
     public static void main(String args[])
     {
         BubbleSort bubbleSort=new BubbleSort();
-        int[] array={1,9,8,7,6,5,4,3};
+        int[] array={1,3,5,7,9,11,13,19,15,17};
         int sortedArray[]=bubbleSort.bubbleSort(array);
 
         for(Integer number:sortedArray)
