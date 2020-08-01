@@ -21,3 +21,4 @@ As of Today, the below programs are covered
 - Product Of Arrays Using Recursion
 - Fibbonaci Using Recursion
 - Binary Search for an Integer Array
+- Bubble Sort
