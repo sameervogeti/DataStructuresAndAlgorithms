@@ -3,7 +3,7 @@
 Hello Folks. This is a collection of common DataStructures and Algorithms Problems implemented in Java.
 As of Today, the below programs are covered
 
-- FizzBuzz
+-  FizzBuzz
 - Custom LinkedList
 - Frequency Counter
 - Kth Largest
@@ -26,3 +26,4 @@ As of Today, the below programs are covered
 - Insertion Sort
 - Set All Zeros in 2D Matrix
 - Stack using an array
+- Reversed Link List
