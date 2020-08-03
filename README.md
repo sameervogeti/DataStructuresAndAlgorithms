@@ -25,3 +25,4 @@ As of Today, the below programs are covered
 - Selection Sort
 - Insertion Sort
 - Set All Zeros in 2D Matrix
+- Stack using an array
