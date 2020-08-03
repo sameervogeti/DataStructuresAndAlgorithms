@@ -24,3 +24,4 @@ As of Today, the below programs are covered
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Set All Zeros in 2D Matrix
