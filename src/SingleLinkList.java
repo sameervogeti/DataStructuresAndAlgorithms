@@ -83,6 +83,14 @@ public class SingleLinkList {
         length--;
         return temp.data;
     }
+    Object unShiftHead(Object Data)
+    {
+        Node temp=new Node(Data);
+        temp.next=this.head;
+        this.head=temp;
+        length++;
+        return temp.data;
+    }
     Object getHead()
     {
         if(this.head!=null)
@@ -124,9 +132,11 @@ class SingleLinkListTest
         singleLinkList.add(3);
         singleLinkList.add(4);
         singleLinkList.add(5);
+        Object shiftedData=singleLinkList.shiftHead();
 
-        System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
-        System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
+
+        System.out.println("Shift Head Result is: "+shiftedData);
+        System.out.println("unShift Head Result is: "+singleLinkList.unShiftHead(shiftedData));
       //  System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
       //  System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
       //  System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
