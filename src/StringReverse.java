@@ -4,18 +4,15 @@ The Input String doesn't contain leading or trailing spaces and the words are se
 Sample Input :- "Leonardo Da Vinci"
 Sample Output:- "Vinci Da Leonardo"
 */
-public class StringReverse
-{
-    public static void main(String args[])
-    {
-       String InputString="Main Shayar toh Nahi";
-       String originalString[]=InputString.split(" ");
-       String reversedString="";
+public class StringReverse {
+    public static void main(String[] args) {
+        String InputString = "Main Shayar toh Nahi";
+        String[] originalString = InputString.split(" ");
+        String reversedString = "";
 
-       for(int word=originalString.length-1;word>=0;word--)
-       {
-           reversedString=reversedString+originalString[word]+" ";
-       }
-       System.out.println(reversedString);
+        for (int word = originalString.length - 1; word >= 0; word--) {
+            reversedString = reversedString + originalString[word] + " ";
+        }
+        System.out.println(reversedString);
     }
 }

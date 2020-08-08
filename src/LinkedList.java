@@ -1,59 +1,51 @@
-class LinkedList
-{
-  static Node head;
+class LinkedList {
+    static Node head;
 
-  static class Node 
-  {
-    int data;
-    Node next;
+    public static void main(String[] args) {
+        LinkedList list;
+        list = new LinkedList();
 
-    Node(int data)
-    {
-      this.data = data;
-      next = null;
-    }
-  }
+        head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
 
-  Node reverseLinkedList(Node node)
-  {
-    Node previous = null;
-    Node current = node;
-    Node next = null;
-
-    while (current != null)
-    {
-      next = current.next;
-      current.next = previous;
-      previous = current;
-      current = next;
+        list.printLinkedList(head);
+        head = list.reverseLinkedList(head);
+        list.printLinkedList(head);
     }
 
-    node = previous;
-    return previous;
-  }
+    Node reverseLinkedList(Node node) {
+        Node previous = null;
+        Node current = node;
+        Node next = null;
 
-  void printLinkedList(Node node)
-  {
-    while (node != null)
-    {
-      System.out.println(node.data);
-      node = node.next;
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        node = previous;
+        return previous;
     }
-  }
 
-  public static void main(String[] args)
-  {
-    LinkedList list;
-    list = new LinkedList();
+    void printLinkedList(Node node) {
+        while (node != null) {
+            System.out.println(node.data);
+            node = node.next;
+        }
+    }
 
-    list.head = new Node(1);
-    list.head.next = new Node(2);
-    list.head.next.next = new Node(3);
-    list.head.next.next.next = new Node(4);
+    static class Node {
+        int data;
+        Node next;
 
-    list.printLinkedList(head);
-    head = list.reverseLinkedList(head);
-    list.printLinkedList(head);
-  }
+        Node(int data) {
+            this.data = data;
+            next = null;
+        }
+    }
 
 }
