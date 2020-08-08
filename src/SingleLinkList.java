@@ -222,13 +222,12 @@ public class SingleLinkList {
     }
     void reverse()
     {
-        System.out.println(tail.data);
-        Node previousTail=previousNode(tail);
-          while(previousTail!=null)
-          {
 
-              System.out.println(previousTail.data);
-              previousTail=previousNode(previousTail);
+
+          while(tail!=null)
+          {
+              System.out.println(tail.data);
+              tail=previousNode(tail);
 
           }
 
