@@ -85,7 +85,12 @@ public class SingleLinkList {
     }
     Object getHead()
     {
-        return this.head.data;
+        if(this.head!=null)
+        {
+            return this.head.data;
+        }
+        return "No Data";
+
     }
     Object getTail()
     {
@@ -99,6 +104,7 @@ public class SingleLinkList {
             System.out.println(current.data);
             current=current.next;
         }
+
     }
     public SingleLinkList()
     {
@@ -120,8 +126,12 @@ class SingleLinkListTest
         singleLinkList.add(5);
 
         System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
-        System.out.println("Tail is: "+singleLinkList.getTail());
+        System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
+      //  System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
+      //  System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
+      //  System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
         System.out.println("Head is: "+singleLinkList.getHead());
+        System.out.println("Tail is: "+singleLinkList.getTail());
         singleLinkList.printElements();
         System.out.println("The New Length is: "+singleLinkList.getLength());
         
