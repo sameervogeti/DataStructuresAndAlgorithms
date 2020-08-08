@@ -4,7 +4,7 @@ public class SingleLinkList {
     private Node tail;
 
     public int getLength() {
-        return length;
+        return this.length;
     }
 
     private int length;
@@ -30,8 +30,15 @@ public class SingleLinkList {
         }
        else
        {
-           this.tail.next=node;
+           Node heaad=this.head;
+           while(heaad.next!=null)
+           {
+               heaad=heaad.next;
+               this.tail=heaad;
+           }
+           heaad.next=node;
            this.tail=node;
+
         }
         length++;
        System.out.println(data+" Added to the Linked List");
@@ -69,6 +76,13 @@ public class SingleLinkList {
         }
 
     }
+    Object shiftHead()
+    {
+        Node temp=this.head;
+        this.head=temp.next;
+        length--;
+        return temp.data;
+    }
     Object getHead()
     {
         return this.head.data;
@@ -104,14 +118,12 @@ class SingleLinkListTest
         singleLinkList.add(3);
         singleLinkList.add(4);
         singleLinkList.add(5);
-        System.out.println("Length of the linked list is: "+singleLinkList.getLength());
-        System.out.println("Head of the LinkedList is:"+singleLinkList.getHead());
-        System.out.println("Tail of the LinkedList is: "+singleLinkList.getTail());
+
+        System.out.println("Shift Head Result is: "+singleLinkList.shiftHead());
+        System.out.println("Tail is: "+singleLinkList.getTail());
+        System.out.println("Head is: "+singleLinkList.getHead());
         singleLinkList.printElements();
-        System.out.println("Item Popped is: "+singleLinkList.pop());
-        System.out.println("Updated Length of the linked list is: "+singleLinkList.getLength());
-        System.out.println("Tail of the LinkedList is: "+singleLinkList.getTail());
-        singleLinkList.printElements();
+        System.out.println("The New Length is: "+singleLinkList.getLength());
         
 
     }
