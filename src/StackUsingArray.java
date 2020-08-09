@@ -1,51 +1,83 @@
-//Implement a stack using an Array
-class Stack {
-    public static final int MAX = 1000;
-    int top;
-    int[] array = new int[MAX];
-
-    Stack() {
-        top = -1;
+public class StackUsingArray {
+    private Object[] stackArray;
+    private int limit;
+    private int index;
+    StackUsingArray()
+    {
+        this.index=0;
+        this.limit=100;
+        this.stackArray=new Object[limit];
     }
-
-    boolean isStackEmpty() {
-        return (top < 0);
-    }
-
-    boolean push(int x) {
-        if (top >= MAX - 1) {
-            System.out.println("Stack Overflow");
-            return false;
-        } else {
-            array[++top] = x;
-            System.out.println("Pushed into stack");
-            return true;
+    public void push(Object dataToBePushed)
+    {
+        if(index>limit)
+        {
+            System.out.println("Error: StackOverflow");
         }
-    }
-
-    int pop() {
-        if (top < 0) {
-            System.out.println("Stack is Empty");
-            return 0;
-        } else {
-            int x = array[top--];
-            return x;
+        else
+        {
+            stackArray[index]=dataToBePushed;
+            index++;
         }
 
+
+
+
+    }
+
+    public void pop()
+    {
+
+        if(index>0)
+        {
+
+            System.out.println(stackArray[index-1]+" has been popped");
+            --index;
+        }
+        else
+        {
+            System.out.println("No Elements  to be Popped");
+        }
+
+
+    }
+
+    public void printStack()
+    {
+        for(int i=0;i<=index-1;i++)
+        {
+           System.out.println(stackArray[i]);
+
+        }
+
+    }
+    public int length()
+    {
+        return this.index;
     }
 }
-
-public class StackUsingArray {
-    public static void main(String[] args) {
-        Stack stack = new Stack();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        System.out.println(stack.pop() + " Popped");
-        System.out.println(stack.isStackEmpty());
+ class StackTest
+{
+    public static void main(String args[])
+    {
+        StackUsingArray stackUsingArray=new StackUsingArray();
+        stackUsingArray.push("Hi");
+        stackUsingArray.push("There");
+        stackUsingArray.push("How");
+        stackUsingArray.push("are");
+        stackUsingArray.push("you");
+        stackUsingArray.push("you");
+        stackUsingArray.push("you");
+        stackUsingArray.push("you");
+        stackUsingArray.push("you");
+        stackUsingArray.push("you");
+        stackUsingArray.push("you");
+        stackUsingArray.push("you");
+        System.out.println("Before Popping, Length = "+stackUsingArray.length());
+        stackUsingArray.pop();
+        stackUsingArray.pop();
+        stackUsingArray.printStack();
+        System.out.println("After Popping, Length = "+stackUsingArray.length());
 
     }
-
-
 }
