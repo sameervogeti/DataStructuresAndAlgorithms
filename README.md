@@ -27,3 +27,4 @@ As of Today, the below programs are covered
 - Set All Zeros in 2D Matrix
 - Stack using an array
 - Reversed Link List
+- Doubly Linked List
